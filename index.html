@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <style>
         .back {
-
             position: fixed;
             padding: 0;
             margin: 0;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 100vh;
             background: white;
             animation-name: backdiv;
             animation-duration: 3500ms;
             animation-iteration-count: infinite;
-            height: 100vh;
         }
 
         .heart {
@@ -30,9 +28,7 @@
             height: 150px;
             width: 150px;
             transform: rotate(-45deg);
-            animation-name: beat;
-            animation-duration: 3500ms;
-            animation-iteration-count: infinite;
+            animation: beat 3500ms infinite ease-in-out;
         }
 
         .heart:after {
@@ -64,12 +60,11 @@
         }
 
         @keyframes beat {
-            0% {
+            0%, 100% {
                 transform: scale(1) rotate(-45deg);
             }
-
             50% {
-                transform: scale(0.6) rotate(-45deg);
+                transform: scale(0.8) rotate(-45deg);
             }
         }
 
@@ -83,58 +78,56 @@
             margin: 20px auto;
             padding: 15px;
             background-color: #aded23;
-        }
-
-        button {
-            background-color: rgb(143, 216, 64);
-            display: block; 
-            margin: 20px auto; 
-            padding: 10px 20px; 
-            color: white; 
-            border: none;
-            margin-top: 70vh;
-             
-        }
-        a{
-            color: black;
-            font-weight: 20px;
-            text-decoration: none;
+            max-width: 400px;
         }
 
         .elements {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-           
+            margin-top: 20px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: rgb(143, 216, 64);
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        button a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
         }
     </style>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
     <title>Flores Amarillas</title>
 </head>
 <body>
     <div class="back">
-        <div class="bday">Buenas dias Anahi preciosa<br>Te envío esta flor amarilla como un pequeño gesto para iluminar tu dia y recordarte lo especial que eres.<br> Espero que tengas sueños llenos de paz y felicidad. Hoy será un día maravilloso!
+        <div class="bday">Buenos días, Anahi preciosa.<br>Te envío esta flor amarilla como un pequeño gesto para iluminar tu día y recordarte lo especial que eres.<br> Espero que tengas sueños llenos de paz y felicidad. ¡Hoy será un día maravilloso!
         </div>
 
         <div class="elements">
-            <div class="heart">
-            </div>
+            <div class="heart"></div>
             <footer>
-                <div class="boton">
-                    <button><a href="Flores/index.html"><span>Has click aquí para ver otra opcion amor</span></a></button>
-                </div>
-                 <div class="boton">
-                    <button><a href="index.html"><span>Has click aquí amor</span></a></button>
-                </div>
+                <button><a href="Flores/index.html">Haz clic aquí para ver otra opción, amor</a></button>
+                <button><a href="index.html">Haz clic aquí, amor</a></button>
             </footer>
-           
         </div>
-       
     </div>
-    
 </body>
 </html>
